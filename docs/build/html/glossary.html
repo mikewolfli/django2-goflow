@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Glossary &#8212; GoFlow 0.51 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="goflow.workflow.views – views for goflow worklow module" href="modules/goflow.workflow.views.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="glossary">
+<span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+</dl>
+<div class="section" id="application">
+<h2>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pushapplication">
+<h2>PushApplication<a class="headerlink" href="#pushapplication" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="user">
+<h2>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="activity">
+<h2>Activity<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h2>
+<p>An activity is a task that must be completed as a part of a process. In GoFlow activities are mapped to python scripts. This way an activity can do anything that can be done from a python script.</p>
+</div>
+<div class="section" id="role">
+<h2>Role<a class="headerlink" href="#role" title="Permalink to this headline">¶</a></h2>
+<p>Roles define who can perform an associated activity. Roles are defined at a per-process level.</p>
+</div>
+<div class="section" id="activity-based-workflow">
+<h2>Activity-based Workflow<a class="headerlink" href="#activity-based-workflow" title="Permalink to this headline">¶</a></h2>
+<p>An activity-based workflow is a workflow that is centered around a set of activities that someone (or something) has to do.</p>
+<p>A given process instance (an instance of a process definition) may have several active workitems, which are the “pending” work a given actor has to do. Once a workitem is completed, the process definition specifies what are the next activities, and thus what new workitems must be created.</p>
+<p>The main concepts in the definition of a process for an activity-based workflow are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>activities</dt>
+<dd><ul class="first last">
+<li>applications that describe work</li>
+<li>sub-process that recursively describe another process</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>transitions, with guards, deciding what’s next</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="process">
+<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>A process is defined as a set of activities that must be done to achieve some goal. Business interactions are mapped to GoFlow processes to automate them. Process activities are connected using transitions defining what has to be done after each activity is completed.</p>
+</div>
+<div class="section" id="transitions">
+<h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this headline">¶</a></h2>
+<p>Transitions defines which activity or activities come before an activity is executed and after it is completed.</p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>A workflow is a model to represent real work for further assessment, e.g., for describing a reliably repeatable sequence of operations. More abstractly, a workflow is a pattern of activity enabled by a systematic organization of resources, defined roles and mass, energy and information flows, into a work process that can be documented and learned.</p>
+<p>The term workflow is used in computer programming to capture and develop human to machine interaction. Workflow software aims to provide end users with an easier way to orchestrate or describe complex processing of data in a visual form, much like flow charts but without the need to understand computers or programming.</p>
+<p>Workflow is a term used to describe the tasks, procedural steps, organizations or people involved, required input and output information, and tools needed for each step in a business process.</p>
+<p>A workflow approach to analyzing and managing a business process can be combined with an object-oriented programming approach, which tends to focus on documents and data. In general, workflow management focuses on processes rather than documents.</p>
+<p>A number of companies make workflow automation products that allow a company to create a workflow model and components such as online forms and then to use this product as a way to manage and enforce the consistent handling of work. For example, an insurance company could use a workflow automation application to ensure that a claim was handled consistently from initial call to final settlement. The workflow application would ensure that each person handling the claim used the correct online form and successfully completed their step before allowing the process to proceed to the next person and procedural step.</p>
+<p>A workflow engine is the component in a workflow automation program that knows all the procedures, steps in a procedure, and rules for each step. The workflow engine determines whether the process is ready to move to the next step.</p>
+<p>Proponents of the workflow approach believe that task analysis and workflow modeling in themselves are likely to improve business operations.</p>
+<p>related concepts:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Petri-Nets: <a class="reference external" href="http://en.wikipedia.org/wiki/Petri_net">http://en.wikipedia.org/wiki/Petri_net</a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="processinstance">
+<h2>ProcessInstance<a class="headerlink" href="#processinstance" title="Permalink to this headline">¶</a></h2>
+<p>An instance is an occurrence of a process being executed. An instance is created when a process is started. The instance passes through the process activities until the process is terminated.</p>
+</div>
+<div class="section" id="workitem">
+<h2>WorkItem<a class="headerlink" href="#workitem" title="Permalink to this headline">¶</a></h2>
+<p>A workitem is added to the instance when an activity is completed. Workitems thus represent completed activities.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Glossary</a><ul>
+<li><a class="reference internal" href="#application">Application</a></li>
+<li><a class="reference internal" href="#pushapplication">PushApplication</a></li>
+<li><a class="reference internal" href="#user">User</a></li>
+<li><a class="reference internal" href="#activity">Activity</a></li>
+<li><a class="reference internal" href="#role">Role</a></li>
+<li><a class="reference internal" href="#activity-based-workflow">Activity-based Workflow</a></li>
+<li><a class="reference internal" href="#process">Process</a></li>
+<li><a class="reference internal" href="#transitions">Transitions</a></li>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+<li><a class="reference internal" href="#processinstance">ProcessInstance</a></li>
+<li><a class="reference internal" href="#workitem">WorkItem</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="modules/goflow.workflow.views.html" title="previous chapter"><code class="docutils literal notranslate"><span class="pre">goflow.workflow.views</span></code> – views for goflow worklow module</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/glossary.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2008, Eric Simorre.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/glossary.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

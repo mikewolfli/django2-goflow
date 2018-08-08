@@ -1,0 +1,35 @@
+{% extends "goflow/base_site.html" %}
+{% block content %}
+<h1>Inform about leave approval</h1>
+To the requester.
+<table> 
+<tr><td>Start date</td><td>{{ object.day_start }}</td></tr>
+<tr><td>End date</td><td>{{ object.day_end }}</td></tr>
+<tr><td>Reason</td><td>{{ object.reason }}</td></tr>
+<tr><td>Type</td><td>{{ object.type }}</td></tr>
+
+<tr><th>Result</th>
+
+{% ifequal instance.condition 'OK' %}
+<td>Your request was approved</td>
+{% endifequal %}
+
+{% ifequal instance.condition 'Denied: Back to requester' %}
+<td>You withdrew the request</td>
+{% endifequal %}
+
+</table>
+<p>
+<form method="post">
+     {% csrf_token %}
+{% for value in ok_values %}
+<input type="submit" name="{{ submit_name }}" value="{{ value }}">
+{% endfor %}
+<input type="submit" name="{{ submit_name }}" value="Cancel">
+</form>
+
+<p>
+<a href="home/">To frontpage</a>
+</p>
+
+{% endblock %}

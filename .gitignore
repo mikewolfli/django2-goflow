@@ -1,0 +1,7 @@
+*.pyc
+.idea
+*.db3
+sampleproject/workflow.log
+sampleproject/data.sqlite
+sampleproject/flags
+leavedemo/workflow.log

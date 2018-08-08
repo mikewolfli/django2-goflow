@@ -1,0 +1,7 @@
+{{ title }}
+
+<select onchange="location = this.value;">
+    {% for choice,val in content.items %}
+        <option value="switch\{{ choice }}\{{ val }}\{{ choice }}\">{{ choice }}</option>
+    {% endfor %}
+</select>

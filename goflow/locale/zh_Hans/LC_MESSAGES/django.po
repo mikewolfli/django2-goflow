@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-14 10:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\apptools\forms.py:21 .\apptools\forms.py:46
+msgid "Priority"
+msgstr "优先级"
+
+#: .\apptools\forms.py:67 .\apptools\forms.py:88
+msgid "Init"
+msgstr "初始化"
+
+#: .\apptools\forms.py:70
+#, python-format
+msgid "Activity: [%s]"
+msgstr "活动: [%s] "
+
+#: .\apptools\forms.py:75
+#, python-format
+msgid " button clicked: [%s]"
+msgstr "点击按钮: [%s]"
+
+#: .\apptools\forms.py:89
+#, python-format
+msgid "%s start instance"
+msgstr "%s 实例启动"
+
+#: .\apptools\forms.py:118
+msgid "(select a content-type)"
+msgstr ""
+
+#: .\apptools\forms.py:119
+msgid "content type"
+msgstr ""
+
+#: .\apptools\forms.py:120
+msgid ""
+"clone all instances of the selected content type and push them in the test "
+"process of the application"
+msgstr "克隆所选content-type的所有实例并进行测试"
+
+#: .\apptools\models.py:28
+#, python-format
+msgid "simulation model %s"
+msgstr "仿真模型 %s"
+
+#: .\apptools\models.py:32
+msgid "Simulation object"
+msgstr "仿真对象"
+
+#: .\apptools\templates\admin\apptools\icon\change_list.html:11
+#: .\apptools\templates\admin\workflow\transition\change_list.html:17
+#: .\workflow\templates\admin\workflow\application\change_list.html:16
+#, python-format
+msgid "Add %(name)s"
+msgstr "新增 %(name)s"
+
+#: .\apptools\templates\admin\workflow\application\change_form.html:17
+#: .\apptools\templates\admin\workflow\pushapplication\change_form.html:17
+#: .\apptools\templates\admin\workflow\transition\change_list.html:8
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:12
+#: .\workflow\templates\admin\workflow\application\change_form.html:17
+#: .\workflow\templates\admin\workflow\application\change_list.html:8
+#: .\workflow\templates\admin\workflow\pushapplication\change_form.html:17
+#: .\workflow\templates\goflow\base.html:52
+msgid "Home"
+msgstr "主页"
+
+#: .\apptools\templates\admin\workflow\application\change_form.html:20
+#: .\apptools\templates\admin\workflow\pushapplication\change_form.html:20
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:14
+#: .\runtime\templates\admin\index.html:33
+#: .\workflow\templates\admin\workflow\application\change_form.html:20
+#: .\workflow\templates\admin\workflow\pushapplication\change_form.html:20
+msgid "Add"
+msgstr "新增"
+
+#: .\apptools\templates\admin\workflow\application\change_form.html:27
+#: .\apptools\templates\admin\workflow\pushapplication\change_form.html:27
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:20
+#: .\workflow\templates\admin\workflow\application\change_form.html:27
+#: .\workflow\templates\admin\workflow\pushapplication\change_form.html:27
+msgid "History"
+msgstr "历史记录"
+
+#: .\apptools\templates\admin\workflow\application\change_form.html:28
+#: .\apptools\templates\admin\workflow\pushapplication\change_form.html:28
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:21
+#: .\workflow\templates\admin\workflow\application\change_form.html:28
+#: .\workflow\templates\admin\workflow\pushapplication\change_form.html:28
+msgid "View on site"
+msgstr "站点查看"
+
+#: .\apptools\templates\admin\workflow\application\change_form.html:39
+#: .\apptools\templates\admin\workflow\pushapplication\change_form.html:39
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:31
+#: .\workflow\templates\admin\workflow\application\change_form.html:39
+#: .\workflow\templates\admin\workflow\pushapplication\change_form.html:39
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "请更正一下错误。"
+msgstr[1] "请更正一下错误。"
+
+#: .\apptools\templates\admin\workflow\transition\change_list.html:27
+#: .\workflow\templates\admin\workflow\application\change_list.html:33
+msgid "Filter"
+msgstr "过滤"
+
+#: .\apptools\views.py:95
+msgid "the save method of the form must accept parameters user and data"
+msgstr "用户表单的保存方法必须接受参数和数据"
+
+#: .\apptools\views.py:97
+#, python-format
+msgid "form save error: %s"
+msgstr "表单保存错误: %s"
+
+#: .\apptools\views.py:487
+msgid "<h1>Update Icons from Images</h1>"
+msgstr "<h1>从图片更新图标</h1>"
+
+#: .\apptools\views.py:491
+#, python-format
+msgid "<br> %s added "
+msgstr "%s 新增"
+
+#: .\apptools\views.py:492
+msgid "<hr><p><b><a href=../>return</a></b>"
+msgstr "<hr><p><b><a href=../>返回</a></b>"
+
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:49
+msgid "Ordering"
+msgstr ""
+
+#: .\graphics2\templates\admin\graphics2\processimage\change_form.html:52
+msgid "Order:"
+msgstr ""
+
+#: .\runtime\templates\admin\index.html:13
+msgid "Django administration"
+msgstr "Django管理"
+
+#: .\runtime\templates\admin\index.html:22
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: .\runtime\templates\admin\index.html:23
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: .\runtime\templates\admin\index.html:39
+msgid "Change"
+msgstr "更改"
+
+#: .\runtime\templates\admin\index.html:49
+msgid "You don't have permission to edit anything."
+msgstr "你没有编辑权限"
+
+#: .\runtime\templates\admin\index.html:57
+msgid "Workflows"
+msgstr "工作流"
+
+#: .\runtime\templates\admin\index.html:76
+msgid "Recent Actions"
+msgstr "最近的操作"
+
+#: .\runtime\templates\admin\index.html:77
+msgid "My Actions"
+msgstr "我的操作"
+
+#: .\runtime\templates\admin\index.html:81
+msgid "None available"
+msgstr "没有有效的"
+
+#: .\runtime\views.py:82
+#, python-format
+msgid "process %s disabled."
+msgstr "过程 %s 禁用"
+
+#: .\runtime\views.py:97
+msgid "completion page."
+msgstr "完成页面"
+
+#: .\workflow\templates\goflow\base.html:37
+msgid "Welcome,"
+msgstr "欢迎"
+
+#: .\workflow\templates\goflow\base.html:40
+msgid "Change password"
+msgstr "更改密码"
+
+#: .\workflow\templates\goflow\base.html:41
+msgid "Log out"
+msgstr "登出"
+
+#: .\workflow\templates\goflow\base.html:43
+msgid "Log in"
+msgstr "登录"
+
+#: .\workflow\templates\goflow\base_site.html:5
+#: .\workflow\templates\goflow\base_site.html:10
+#: .\workflow\templates\goflow\login.html:5
+msgid "GoFlow"
+msgstr ""
+
+#: .\workflow\views.py:70
+msgid "user is not active"
+msgstr "用户未激活"
+
+#: .\workflow\views.py:72
+msgid "authentication failed"
+msgstr "授权失败"
+
+#: .\workflow\views.py:79
+msgid "user page."
+msgstr "用户页面"

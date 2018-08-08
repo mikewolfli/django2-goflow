@@ -1,0 +1,19 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools %}
+{{ block.super }}
+
+When you create a new process, you first have to:
+<ul>
+<li> name the process (title field) and add a description
+<li> create a beginning activity (first you must save with "Save and continue editing"), or you can select
+one used by another process, it will be copied.
+<li> you can leave the end activity blank, it will be created
+<li> create other activities  <a href=../../activity/add/>from scratch</a> or  <a href=../../activity/>by copying others</a>, then transitions between these activities.
+</ul>
+To start an instance in the process, a user must have "can_instantiate" permission in
+a group with the same name as the process.
+<p>
+<a href=../../activity>Edit activities</a>
+
+{% endblock %}

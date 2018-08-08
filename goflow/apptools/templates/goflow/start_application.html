@@ -1,0 +1,46 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_modify staticfiles %}
+
+{% block extrahead %}{{ block.super }}
+<script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}}js/core.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}}js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}}js/calendar.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}}js/admin/DateTimeShortcuts.js"></script>
+{% endblock %}
+
+{% block content %}
+	<h1>Start application</h1>
+	This is a default form used by the generic application:
+	<ul>
+	<li>start_application
+	</ul>
+	You may use a suitable form by setting the <i>form_class</i> parameter
+	in the urls.py file as follows:
+	<pre>
+	    (r'^my/appli/request/$',
+	      'openflow.workflow.applications.start_application',
+	      {'process_name':'newleave',
+	      'form_class':MyForm,
+	      'template':'mytemplate.html'})
+	</pre>
+	<p>The form must be a <a href=http://www.djangoproject.com/documentation/modelforms/>ModelForm</a> that
+	inherits from <i>goflow.runtime.forms.StartForm</i>.
+	<p>You may also define a suitable template (the default is <i>start_application.html</i>) with the <i>template</i> parameter.
+	
+	
+	{% if form.is_multipart %}
+		<form enctype="multipart/form-data" method="post">
+	{% else %}
+		<form method="post">
+	{% endif %}
+	 {% csrf_token %}
+	
+	{% load apptools_lib %}
+	{% form_ext form %}
+	
+	<input type="submit" name='action' value='OK'>
+	<input type="submit" name='action' value='Cancel'>
+	</form>
+
+{% endblock %}

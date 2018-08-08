@@ -1,0 +1,72 @@
+GoFlow - A workflow engine for Django
+-------------------------------------
+
+1. Components:
+
+- goflow:       workflow django contrib
+
+  sub-components (django apps):
+  * workflow:  workflow statics modeling
+  * runtime: workflow dynamics modeling
+  * apptools:  built-in workflow applications to help developers
+  * graphics: WIP process graphic stuff
+  * graphics2: WIP alternate process graphic stuff
+  
+  sub-components (other):
+  * testgoflow: django project for testing
+
+- sampleproject: a turn-key, easy-to-start goflow project
+
+- leavedemo:     goflow demo project
+
+- leave:         fastcgi deployment (on alwaysdata.net)
+
+
+2. Requirements:
+
+- Python 3.4+
+- Django 2.0+
+- for sampleproject:
+  * django-flags (http://code.google.com/p/django-flags/)(note: no need to download this , it has been in the dir and fit for python 3.6)
+  * docutils (admindocs)
+
+
+3. Install instructions:
+
+leavedemo project:
+
+- cd leavedemo
+  > create the database with command "python manage.py migrate --noinput"
+  > don't create the admin account, because
+    leave demo data and all users required for playing with it will
+    be created at this stage.
+ 
+- superuser is "admin" with password "open"
+
+
+sampleproject project:
+
+- install flags application in the sampleproject directory
+- move "flags/img/flags" directory in the "static" directory
+- cd sampleproject 
+  > create the database with command "python manage.py migrate --noinput"
+- superuser is  "admin" with password "admin"
+
+
+4. Test instructions:
+
+- run "python manage.py runserver" (with goflow in python path)
+
+- admin interface: http://localhost:8000/leave/admin
+
+- leave demo:      http://localhost:8000/leave/
+
+
+5. deployment instruction on a factcgi server online (like www.alwaysdata.net)
+
+- copy get_svn_leavdemo.sh on the server and run
+
+- admin interface: http://localhost:8000/leave/admin
+
+- leave demo:      http://localhost:8000/leave/
+

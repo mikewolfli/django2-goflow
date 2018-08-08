@@ -1,0 +1,81 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_modify static %} 
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}" />
+{% endblock %}
+
+
+{% block extrahead %}{{ block.super }}
+<script type="text/javascript" src="{% url 'admin:jsi18n'  %}"></script>
+<script type="text/javascript" src="{% static 'admin/js/core.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<div>
+<h1>Annual Paid Leaves of Employee</h1>
+<table class='table' border='1'>
+    <thead class="thead-inverse">
+        <td>Leave Type</td>
+        <td>Days</td>
+    </thead>
+    {% for obj in objs %}
+    <tr>
+        <td>{{obj.category}}</td>
+        <td>{{obj.days}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+<div></div>
+<div>
+
+<h1>Start application: new leave request</h1>
+<form action='.' method="post">
+{% csrf_token %}
+<table>
+    {{form.media}}
+{{ form }}
+        <table class="table">
+            {{ formset.management_form }} {% for form in formset.forms %} {% if forloop.first %}
+            <thead>
+                <tr>
+                    {% for field in form.visible_fields %}
+                    <th>{{ field.label|capfirst }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            {% endif %}
+            <tr class="{% cycle row1 row2 %} formset_row">
+                {% for field in form.visible_fields %}
+                <td>
+                    {# Include the hidden fields in the form #} 
+                    {% if forloop.first %} 
+                    {% for hidden in form.hidden_fields %} 
+                    {{ hidden }}
+                     {%endfor %}
+                      {% endif %} 
+                      {{ field.errors.as_ul }} 
+                      {{ field }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+</table>
+<input type="submit" name="{{submit_name}}" value="{{ok_value}}">
+<input type="submit" name="{{submit_name}}" value="{{cancel_value}}">
+</form>
+</div>
+
+    <script src="{% static 'formset/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'formset/jquery.formset.js' %}"></script>
+    <script type="text/javascript">
+        $('.formset_row').formset({
+            addText: 'add attachment',
+            deleteText: 'remove',
+            prefix: 'leaveattachment_set'
+        });
+    </script>
+{% endblock %}
