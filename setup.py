@@ -7,7 +7,7 @@ setup(
     author='Mike Li',
     author_email='mikewolfli@163.com',
     url='***',
-    packages=['goflow2', 'goflow2.apptools', 'goflow2.runtime', 'goflow2.graphics', 'goflow2.graphics2', 'goflow2.workflow', 'goflow2.apptools.templatetags', 'goflow2.runtime.templatetags', 'goflow.workflow.templatetags', 'goflow.graphics2.templatetags'],
+    packages=['goflow', 'goflow.apptools', 'goflow.runtime', 'goflow.graphics', 'goflow.graphics2', 'goflow.workflow', 'goflow.apptools.templatetags', 'goflow.runtime.templatetags', 'goflow.workflow.templatetags', 'goflow.graphics2.templatetags'],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
